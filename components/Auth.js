@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import Cookie from "universal-cookie";
-import Image from "next/image";
+
+import { LockClosedIcon } from '@heroicons/react/solid'
 
 const cookie = new Cookie();
 
@@ -67,7 +68,8 @@ export default function Auth() {
   return (
     <div className="max-w-md w-full space-y-8">
       <div>
-        <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}   
+        <img
           className="mx-auto h-12 w-auto"
           src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
           alt="Workflow"
@@ -147,3 +149,6 @@ export default function Auth() {
     </div>
   );
 }
+
+
+
